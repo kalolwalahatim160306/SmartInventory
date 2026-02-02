@@ -1,0 +1,149 @@
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 320px;
+  height: 100vh;
+  background: linear-gradient(180deg, #1e293b 0%, #334155 100%);
+  border-right: 1px solid rgba(71, 85, 105, 0.3);
+  z-index: 1000;
+  overflow: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.sidebar::-webkit-scrollbar {
+  display: none;
+}
+
+.sidebar-header {
+  padding: 1rem 1rem;
+  border-bottom: 1px solid rgba(71, 85, 105, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo-icon {
+  width: 20px;
+  height: 20px;
+  color: #0ea5e9;
+  flex-shrink: 0;
+}
+
+.logo h1 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #e2e8f0;
+  margin: 0;
+}
+
+.sidebar-nav {
+  padding: 1rem 0;
+  height: calc(100vh - 120px);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 1.5rem;
+  color: #cbd5e1;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border-left: 3px solid transparent;
+  font-weight: 500;
+}
+
+.nav-item:hover {
+  background: rgba(14, 165, 233, 0.1);
+  color: #0ea5e9;
+  border-left-color: rgba(14, 165, 233, 0.3);
+}
+
+.nav-item.active {
+  background: rgba(14, 165, 233, 0.15);
+  color: #0ea5e9;
+  border-left-color: #0ea5e9;
+}
+
+.nav-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 1024px) {
+  .sidebar {
+    width: 300px;
+  }
+  
+  .logo h1 {
+    font-size: 1rem;
+  }
+  
+  .logo-icon {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 280px;
+  }
+  
+  .logo h1 {
+    font-size: 0.9rem;
+  }
+  
+  .logo-icon {
+    width: 16px;
+    height: 16px;
+  }
+  
+  .nav-item {
+    padding: 1.25rem 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .nav-icon {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar {
+    width: 260px;
+  }
+  
+  .sidebar-header {
+    padding: 1rem 0.75rem;
+  }
+  
+  .logo h1 {
+    font-size: 0.8rem;
+  }
+  
+  .logo-icon {
+    width: 14px;
+    height: 14px;
+  }
+  
+  .nav-item {
+    padding: 1rem 0.75rem;
+    font-size: 0.85rem;
+  }
+}
